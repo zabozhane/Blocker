@@ -1,0 +1,5 @@
+# Генерируется build.sh
+/AdBlocker/
+/build/
+.DS_Store
+xcuserdata/
