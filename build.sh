@@ -41,7 +41,11 @@ MSG
 fi
 echo "→ Подписываю командой разработчика: $TEAM"
 
-# --- 2. Создаём Xcode-проект (один раз) ---
+# --- 2. Обновляем списки рекламных серверов (EasyList, RU AdList) ---
+echo "→ Обновляю списки рекламных серверов…"
+python3 tools/update_lists.py || echo "  (не удалось обновить, использую прежние списки)"
+
+# --- 3. Создаём Xcode-проект (один раз) ---
 if [ ! -d "$APP_NAME" ]; then
   echo "→ Создаю Xcode-проект…"
   xcrun safari-web-extension-converter extension \
@@ -58,7 +62,7 @@ for f in "$APP_NAME/$APP_NAME.xcodeproj"/project.*; do
   perl -pi -e 'if (/PRODUCT_BUNDLE_IDENTIFIER/ && !/\.Extension/) { s/(PRODUCT_BUNDLE_IDENTIFIER"?\s*[:=]\s*"?)[A-Za-z0-9.\-]+/${1}'"$BUNDLE_ID"'/ }' "$f"
 done
 
-# --- 3. Собираем с настоящей подписью ---
+# --- 4. Собираем с настоящей подписью ---
 mkdir -p build
 LOG="build/xcodebuild.log"
 echo "→ Собираю приложение (1–2 минуты)…"
@@ -73,7 +77,7 @@ xcodebuild -project "$APP_NAME/$APP_NAME.xcodeproj" \
     exit 1
   }
 
-# --- 4. Устанавливаем в «Программы» и регистрируем в Safari ---
+# --- 5. Устанавливаем в «Программы» и регистрируем в Safari ---
 APP_PATH="build/Build/Products/Release/$APP_NAME.app"
 DEST="/Applications/$APP_NAME.app"
 [ -w /Applications ] || DEST="$HOME/Applications/$APP_NAME.app"
