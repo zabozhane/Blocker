@@ -81,6 +81,10 @@ mkdir -p "$(dirname "$DEST")"
 pkill -x "$APP_NAME" 2>/dev/null || true
 rm -rf "$DEST"
 cp -R "$APP_PATH" "$DEST"
+# Убираем копию из папки сборки, иначе Safari покажет расширение дважды
+LSREGISTER=/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister
+"$LSREGISTER" -u "$APP_PATH" 2>/dev/null || true
+rm -rf "$APP_PATH"
 open "$DEST"
 
 cat <<MSG
