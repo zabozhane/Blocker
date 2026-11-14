@@ -2627,7 +2627,7 @@
    "type": "block"
   },
   "condition": {
-   "urlFilter": "||imasdk.googleapis.com/pal/",
+   "urlFilter": "||videoroll.net^",
    "resourceTypes": [
     "script",
     "image",
@@ -2650,7 +2650,7 @@
    "type": "block"
   },
   "condition": {
-   "urlFilter": "||vast.yandex.ru^",
+   "urlFilter": "||showvid.ws^",
    "resourceTypes": [
     "script",
     "image",
@@ -2673,7 +2673,7 @@
    "type": "block"
   },
   "condition": {
-   "urlFilter": "||yandex.ru/ads/",
+   "urlFilter": "||imasdk.googleapis.com/pal/",
    "resourceTypes": [
     "script",
     "image",
@@ -2696,7 +2696,7 @@
    "type": "block"
   },
   "condition": {
-   "urlFilter": "||yandex.ru/an/",
+   "urlFilter": "||vast.yandex.ru^",
    "resourceTypes": [
     "script",
     "image",
@@ -2719,7 +2719,7 @@
    "type": "block"
   },
   "condition": {
-   "urlFilter": "||mc.yandex.ru/metrika/advert",
+   "urlFilter": "||yandex.ru/ads/",
    "resourceTypes": [
     "script",
     "image",
@@ -2742,7 +2742,7 @@
    "type": "block"
   },
   "condition": {
-   "urlFilter": "||vk.com/ads_rotate",
+   "urlFilter": "||yandex.ru/an/",
    "resourceTypes": [
     "script",
     "image",
@@ -2765,7 +2765,7 @@
    "type": "block"
   },
   "condition": {
-   "urlFilter": "||ok.ru/dk?cmd=adv",
+   "urlFilter": "||mc.yandex.ru/metrika/advert",
    "resourceTypes": [
     "script",
     "image",
@@ -2788,7 +2788,7 @@
    "type": "block"
   },
   "condition": {
-   "urlFilter": "/vast.xml",
+   "urlFilter": "||vk.com/ads_rotate",
    "resourceTypes": [
     "script",
     "image",
@@ -2811,7 +2811,7 @@
    "type": "block"
   },
   "condition": {
-   "urlFilter": "/vast?",
+   "urlFilter": "||ok.ru/dk?cmd=adv",
    "resourceTypes": [
     "script",
     "image",
@@ -2834,7 +2834,7 @@
    "type": "block"
   },
   "condition": {
-   "urlFilter": "/vmap?",
+   "urlFilter": "/vast.xml",
    "resourceTypes": [
     "script",
     "image",
@@ -2857,7 +2857,7 @@
    "type": "block"
   },
   "condition": {
-   "urlFilter": "||fundingchoicesmessages.google.com/i/*ers=",
+   "urlFilter": "/vast?",
    "resourceTypes": [
     "script",
     "image",
@@ -2880,7 +2880,7 @@
    "type": "block"
   },
   "condition": {
-   "urlFilter": "||fundingchoicesmessages.google.com/f/AGSKWx",
+   "urlFilter": "/vmap?",
    "resourceTypes": [
     "script",
     "image",
@@ -2903,7 +2903,7 @@
    "type": "block"
   },
   "condition": {
-   "urlFilter": "||btloader.com^",
+   "urlFilter": "||fundingchoicesmessages.google.com/i/*ers=",
    "resourceTypes": [
     "script",
     "image",
@@ -2926,7 +2926,7 @@
    "type": "block"
   },
   "condition": {
-   "urlFilter": "||blockthrough.com^",
+   "urlFilter": "||fundingchoicesmessages.google.com/f/AGSKWx",
    "resourceTypes": [
     "script",
     "image",
@@ -2949,7 +2949,7 @@
    "type": "block"
   },
   "condition": {
-   "urlFilter": "||adrecover.com^",
+   "urlFilter": "||btloader.com^",
    "resourceTypes": [
     "script",
     "image",
@@ -2972,7 +2972,7 @@
    "type": "block"
   },
   "condition": {
-   "urlFilter": "||admiral.io^",
+   "urlFilter": "||blockthrough.com^",
    "resourceTypes": [
     "script",
     "image",
@@ -2995,7 +2995,7 @@
    "type": "block"
   },
   "condition": {
-   "urlFilter": "||getadmiral.com^",
+   "urlFilter": "||adrecover.com^",
    "resourceTypes": [
     "script",
     "image",
@@ -3018,7 +3018,7 @@
    "type": "block"
   },
   "condition": {
-   "urlFilter": "||pagefair.com^",
+   "urlFilter": "||admiral.io^",
    "resourceTypes": [
     "script",
     "image",
@@ -3041,7 +3041,7 @@
    "type": "block"
   },
   "condition": {
-   "urlFilter": "||pagefair.net^",
+   "urlFilter": "||getadmiral.com^",
    "resourceTypes": [
     "script",
     "image",
@@ -3059,33 +3059,47 @@
   "id": 133
  },
  {
-  "priority": 2,
+  "priority": 1,
   "action": {
-   "type": "redirect",
-   "redirect": {
-    "extensionPath": "/stubs/googletag.js"
-   }
+   "type": "block"
   },
   "condition": {
-   "urlFilter": "||googletagservices.com/tag/js/gpt.js",
+   "urlFilter": "||pagefair.com^",
    "resourceTypes": [
-    "script"
+    "script",
+    "image",
+    "stylesheet",
+    "object",
+    "xmlhttprequest",
+    "sub_frame",
+    "media",
+    "websocket",
+    "ping",
+    "font",
+    "other"
    ]
   },
   "id": 134
  },
  {
-  "priority": 2,
+  "priority": 1,
   "action": {
-   "type": "redirect",
-   "redirect": {
-    "extensionPath": "/stubs/googletag.js"
-   }
+   "type": "block"
   },
   "condition": {
-   "urlFilter": "||securepubads.g.doubleclick.net/tag/js/gpt.js",
+   "urlFilter": "||pagefair.net^",
    "resourceTypes": [
-    "script"
+    "script",
+    "image",
+    "stylesheet",
+    "object",
+    "xmlhttprequest",
+    "sub_frame",
+    "media",
+    "websocket",
+    "ping",
+    "font",
+    "other"
    ]
   },
   "id": 135
@@ -3095,11 +3109,11 @@
   "action": {
    "type": "redirect",
    "redirect": {
-    "extensionPath": "/stubs/noop.js"
+    "extensionPath": "/stubs/googletag.js"
    }
   },
   "condition": {
-   "urlFilter": "||securepubads.g.doubleclick.net/gpt/pubads_impl_",
+   "urlFilter": "||googletagservices.com/tag/js/gpt.js",
    "resourceTypes": [
     "script"
    ]
@@ -3115,12 +3129,44 @@
    }
   },
   "condition": {
-   "urlFilter": "||pagead2.googlesyndication.com/tag/js/gpt.js",
+   "urlFilter": "||securepubads.g.doubleclick.net/tag/js/gpt.js",
    "resourceTypes": [
     "script"
    ]
   },
   "id": 137
+ },
+ {
+  "priority": 2,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "extensionPath": "/stubs/noop.js"
+   }
+  },
+  "condition": {
+   "urlFilter": "||securepubads.g.doubleclick.net/gpt/pubads_impl_",
+   "resourceTypes": [
+    "script"
+   ]
+  },
+  "id": 138
+ },
+ {
+  "priority": 2,
+  "action": {
+   "type": "redirect",
+   "redirect": {
+    "extensionPath": "/stubs/googletag.js"
+   }
+  },
+  "condition": {
+   "urlFilter": "||pagead2.googlesyndication.com/tag/js/gpt.js",
+   "resourceTypes": [
+    "script"
+   ]
+  },
+  "id": 139
  },
  {
   "priority": 2,
@@ -3136,7 +3182,7 @@
     "script"
    ]
   },
-  "id": 138
+  "id": 140
  },
  {
   "priority": 2,
@@ -3152,7 +3198,7 @@
     "script"
    ]
   },
-  "id": 139
+  "id": 141
  },
  {
   "priority": 2,
@@ -3168,7 +3214,7 @@
     "script"
    ]
   },
-  "id": 140
+  "id": 142
  },
  {
   "priority": 2,
@@ -3184,7 +3230,7 @@
     "script"
    ]
   },
-  "id": 141
+  "id": 143
  },
  {
   "priority": 2,
@@ -3200,7 +3246,7 @@
     "script"
    ]
   },
-  "id": 142
+  "id": 144
  },
  {
   "priority": 2,
@@ -3216,7 +3262,7 @@
     "script"
    ]
   },
-  "id": 143
+  "id": 145
  },
  {
   "priority": 2,
@@ -3232,7 +3278,7 @@
     "script"
    ]
   },
-  "id": 144
+  "id": 146
  },
  {
   "priority": 2,
@@ -3248,7 +3294,7 @@
     "script"
    ]
   },
-  "id": 145
+  "id": 147
  },
  {
   "priority": 2,
@@ -3264,7 +3310,7 @@
     "script"
    ]
   },
-  "id": 146
+  "id": 148
  },
  {
   "priority": 2,
@@ -3280,7 +3326,7 @@
     "script"
    ]
   },
-  "id": 147
+  "id": 149
  },
  {
   "priority": 2,
@@ -3296,7 +3342,7 @@
     "script"
    ]
   },
-  "id": 148
+  "id": 150
  },
  {
   "priority": 2,
@@ -3312,7 +3358,7 @@
     "script"
    ]
   },
-  "id": 149
+  "id": 151
  },
  {
   "priority": 2,
@@ -3328,6 +3374,6 @@
     "script"
    ]
   },
-  "id": 150
+  "id": 152
  }
 ]

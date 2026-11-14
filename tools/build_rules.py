@@ -29,6 +29,7 @@ recreativ.ru cityadspix.com adlabs.ru gnezdo.ru traffic-media.co
 yadro.ru adwile.com kadam.net nativeroll.tv vidroll.ru getintent.com
 segmento.ru sape.ru advmaker.ru moevideo.biz moevideo.net
 viqeo.tv videonow.ru mobiads.ru digitaltarget.ru
+videoroll.net showvid.ws
 """
 
 # Сети всплывающих окон (pop-up / pop-under) и агрессивной рекламы в видеоплеерах

@@ -19,6 +19,8 @@
     '[id^="mgid_"]', '[id^="MarketGid"]', '[class*="mgbox"]', '[id^="lentainform"]',
     '.smi2-widget', '[id^="unit_"][id*="smi2"]', '.relap-default-container',
     '.relap-default-wrapper', '[id^="relap"]', '.r24smi', '[id^="adskeeper"]',
+    // Всплывающие видео-окна в углу (videoroll и похожие) на онлайн-кинотеатрах
+    '[id$="_vid_vpaut"]', '[id^="videoroll"]', 'iframe[src*="videoroll.net"]',
   ];
 
   // 2) Общие названия рекламных контейнеров. Сайты используют такие же классы
@@ -101,5 +103,8 @@ ${ANTI_ADBLOCK.join(',\n')},
     s.onload = () => s.remove();
     (document.head || document.documentElement).appendChild(s);
   };
-  queueMicrotask(() => injectMain('content/popup-guard.js', 'data-sab-guard'));
+  queueMicrotask(() => {
+    injectMain('content/popup-guard.js', 'data-sab-guard');
+    injectMain('content/vast-guard.js', 'data-sab-vast');
+  });
 })();
