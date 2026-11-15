@@ -3,7 +3,7 @@
   "default_locale": "ru",
   "name": "__MSG_extension_name__",
   "description": "__MSG_extension_description__",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "icons": {
     "48": "images/icon-48.png",
     "96": "images/icon-96.png",
@@ -97,6 +97,16 @@
     },
     {
       "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content/yandex-detect.js"
+      ],
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": [
         "*://*.youtube.com/*",
         "*://youtube.com/*",
         "*://*.youtube-nocookie.com/*"
@@ -127,6 +137,7 @@
         "content/youtube-main.js",
         "content/popup-guard.js",
         "content/vast-guard.js",
+        "content/yandex-detect.js",
         "stubs/*"
       ],
       "matches": [

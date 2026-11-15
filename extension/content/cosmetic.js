@@ -47,6 +47,8 @@
     '.adblock-notice', '.adblock-modal', '#adblock-modal', '.adblock-overlay', '#adblock-overlay',
     '.adblock-detected', '#adblock-detected', '.adblocker-message', '.adblock-wall', '#adb-overlay',
     '.adblock-popup', '#adblock-popup', '[class*="AdBlockWall"]', '[class*="adblockWall"]',
+    // Кинопоиск: «Кажется, вы используете блокировщик рекламы…»
+    '[class*="adBlockWarning"]', '[class*="AdblockWarning"]', '[data-tid="90f1e109"]',
   ];
 
   const css = `${SPECIFIC.join(',\n')},
@@ -106,5 +108,6 @@ ${ANTI_ADBLOCK.join(',\n')},
   queueMicrotask(() => {
     injectMain('content/popup-guard.js', 'data-sab-guard');
     injectMain('content/vast-guard.js', 'data-sab-vast');
+    if (window === window.top) injectMain('content/yandex-detect.js', 'data-sab-ydetect');
   });
 })();
